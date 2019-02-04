@@ -93,13 +93,6 @@
   ],
   "projects": [
     {
-      "id": 1,
-      "title": "projeto 1",
-      "details": "detalhes do projeto 1",
-      "percentComplete": 34,
-      "approved": false
-    },
-    {
       "id": 2,
       "title": "projeto 2",
       "details": "detalhes do projeto 2",
@@ -107,10 +100,17 @@
       "approved": true
     },
     {
-      "id": 3,
-      "title": "projeto 3222",
-      "details": "createProject",
-      "percentComplete": 97,
+      "id": 4,
+      "title": "project 4",
+      "details": "detail for project 4",
+      "percentComplete": 56,
+      "approved": false
+    },
+    {
+      "id": 5,
+      "title": "project 5",
+      "details": "details project 5",
+      "percentComplete": 46,
       "approved": false
     }
   ]
