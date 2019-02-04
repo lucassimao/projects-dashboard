@@ -91,5 +91,27 @@
       "status": 2
     }
   ],
-  "projects": []
+  "projects": [
+    {
+      "id": 1,
+      "title": "projeto 1",
+      "details": "detalhes do projeto 1",
+      "percentComplete": 34,
+      "approved": false
+    },
+    {
+      "id": 2,
+      "title": "projeto 2",
+      "details": "detalhes do projeto 2",
+      "percentComplete": 99,
+      "approved": true
+    },
+    {
+      "id": 3,
+      "title": "projeto 3222",
+      "details": "createProject",
+      "percentComplete": 97,
+      "approved": false
+    }
+  ]
 }

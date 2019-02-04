@@ -5,6 +5,7 @@ import { ProjectsRoutingModule } from './projects-routing.module';
 import { ProjectsComponent } from './projects.component';
 import { MaterialModule } from '@workshop/material';
 import { CoreDataModule } from '@workshop/core-data';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ProjectsComponent],
@@ -12,7 +13,8 @@ import { CoreDataModule } from '@workshop/core-data';
     CommonModule,
     ProjectsRoutingModule,
     MaterialModule,
-    CoreDataModule
+    CoreDataModule,
+    FormsModule
     ]
   ,
   exports:[ProjectsComponent]

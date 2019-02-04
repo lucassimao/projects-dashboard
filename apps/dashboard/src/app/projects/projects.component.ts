@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Project, ProjectsService } from '@workshop/core-data';
-import { resultMemoize } from '@ngrx/store';
+import { ProjectsService, Project } from '@workshop/core-data';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -16,23 +15,56 @@ export class ProjectsComponent implements OnInit {
   constructor(private projectsService: ProjectsService) {}
 
   ngOnInit() {
-      this.getProjects();
+    this.getProjects();
+    this.resetProject();
   }
 
   selectProject(project) {
     this.selectedProject = project;
   }
 
-  deleteProject(project){
-      this.projectsService.delete(project)
-            .subscribe(result => this.getProjects());
+  resetProject() {
+    const emptyProject: Project = {
+      id: null,
+      title: '',
+      details: '',
+      percentComplete: 0,
+      approved: false
+    };
+    this.selectProject(emptyProject);
+  }
+
+  deleteProject(project) {
+    this.projectsService
+      .delete(project)
+      .subscribe(result => this.getProjects());
   }
 
   cancel() {
-    this.selectProject(null);
+    this.resetProject();
   }
 
   getProjects(): void {
-      this.projects$ = this.projectsService.all();
+    this.projects$ = this.projectsService.all();
+  }
+
+  saveProject(project) {
+    if (project.id) this.updateProject(project);
+    else this.createProject(project);
+
+  }
+
+  createProject(project) {
+    this.projectsService.create(project).subscribe(result => {
+      this.getProjects();
+      this.resetProject();
+    });
+  }
+
+  updateProject(project) {
+    this.projectsService.update(project).subscribe(result => {
+      this.getProjects();
+      this.resetProject();
+    });
   }
 }

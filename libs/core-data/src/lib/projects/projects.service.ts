@@ -27,7 +27,7 @@ export class ProjectsService {
   }
 
   create(project) {
-    this.httpClient.post(this.getUrl(), project);
+    return this.httpClient.post(this.getUrl(), project);
   }
   getUrl(): string {
     return `${BASE_URL}/${this.model}`;
