@@ -6,37 +6,6 @@
   </div>
   <!-- PROJECT DETAILS -->
   <div class="col-50">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>
-          <h1>
-            <span *ngIf="selectedProject.id; else elseBlock">{{ selectedProject.title }}</span>
-            <ng-template #elseBlock>Select a Project</ng-template>
-          </h1>
-        </mat-card-title>
-      </mat-card-header>
-      <form (submit)="saveProject(selectedProject)">
-        <mat-card-content>
-          <mat-form-field class="full-width">
-            <input matInput placeholder="Title" [(ngModel)]="selectedProject.title" type="text" name="title">
-          </mat-form-field>
-          <mat-form-field class="full-width">
-            <textarea matInput placeholder="Details" [(ngModel)]="selectedProject.details" name="details"></textarea>
-          </mat-form-field>
-          <section>
-            <h4>{{selectedProject.percentComplete}}% Complete</h4>
-            <mat-slider [(ngModel)]="selectedProject.percentComplete" name="slider" class="full-width" min="0" max="100" thumbLabel>
-            </mat-slider>
-        </section>
-        <section>
-            <mat-checkbox [(ngModel)]="selectedProject.approved" name="approve">Approved by Customer</mat-checkbox>
-        </section>
-        </mat-card-content>
-        <mat-card-actions>
-          <button type="submit" mat-button color="primary">Save</button>
-          <button type="button" mat-button (click)="cancel()">Cancel</button>
-        </mat-card-actions>
-      </form>
-    </mat-card>
+      <app-projects-details [project]="selectedProject" (cancelled)="cancel()" (saved)="saveProject($event)"></app-projects-details>
   </div>
 </div>

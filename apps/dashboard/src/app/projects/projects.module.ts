@@ -7,9 +7,10 @@ import { MaterialModule } from '@workshop/material';
 import { CoreDataModule } from '@workshop/core-data';
 import { FormsModule } from '@angular/forms';
 import { ProjectsListComponent } from './projects-list/projects-list.component';
+import { ProjectsDetailsComponent } from './projects-details/projects-details.component';
 
 @NgModule({
-  declarations: [ProjectsComponent, ProjectsListComponent],
+  declarations: [ProjectsComponent, ProjectsListComponent, ProjectsDetailsComponent],
   imports: [
     CommonModule,
     ProjectsRoutingModule,

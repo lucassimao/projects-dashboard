@@ -94,10 +94,10 @@
   "projects": [
     {
       "id": 2,
-      "title": "projeto 2",
+      "title": "projeto 212",
       "details": "detalhes do projeto 2",
-      "percentComplete": 99,
-      "approved": true
+      "percentComplete": 13,
+      "approved": false
     },
     {
       "id": 4,
@@ -112,6 +112,13 @@
       "details": "details project 5",
       "percentComplete": 46,
       "approved": false
+    },
+    {
+      "id": 6,
+      "title": "projeto 6",
+      "details": "6666666666666666",
+      "percentComplete": 42,
+      "approved": true
     }
   ]
 }
