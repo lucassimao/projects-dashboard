@@ -5,7 +5,7 @@ Nx is an open source toolkit for enterprise Angular applications.
 
 ## Development server
 
-Run `ng serve --project=myapp` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run server` and `ng serve --project=dashboard` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
