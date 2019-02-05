@@ -9,7 +9,7 @@ Run `npm run server` and `ng serve --project=dashboard` for a dev server. Naviga
 
 ## Build
 
-Run `ng build --project=myapp` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build --project=dashboard` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
