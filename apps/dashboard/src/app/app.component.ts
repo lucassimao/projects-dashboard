@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular core workshop';
   links = [
-      {path: '/', title: 'Home',icon:'home'},
-      {path: 'customers', title: 'Customer',icon:'face'},
-      {path: 'projects', title: 'Projects',icon:'work'}
+    //   {path: '/', title: 'Home',icon:'home'},
+    //   {path: 'customers', title: 'Customer',icon:'face'},
+      {path: '/', title: 'Projects',icon:'work'}
   ]
 }

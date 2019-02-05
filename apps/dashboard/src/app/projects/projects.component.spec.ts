@@ -48,15 +48,15 @@ describe('ProjectsComponent', () => {
       expect(component.selectedProject).toBe(emptyProject);
   })
 
-  it('should display primaryColor',()=>{
-    const h1 = debugElement.query(By.css("h1"));
-    expect(h1.nativeElement.innerText).toBe("red");
-  })
+//   it('should display primaryColor',()=>{
+//     const h1 = debugElement.query(By.css("h1"));
+//     expect(h1.nativeElement.innerText).toBe("red");
+//   })
 
-  it('should update h1 to new primaryColor',()=>{
-    const h1 = debugElement.query(By.css("h1"));
-    component.primaryColor = 'black';
-    fixture.detectChanges();
-    expect(h1.nativeElement.innerText).toBe("black");
-  })
+//   it('should update h1 to new primaryColor',()=>{
+//     const h1 = debugElement.query(By.css("h1"));
+//     component.primaryColor = 'black';
+//     fixture.detectChanges();
+//     expect(h1.nativeElement.innerText).toBe("black");
+//   })
 });
