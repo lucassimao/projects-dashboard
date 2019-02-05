@@ -7,13 +7,19 @@
       </h1>
     </mat-card-title>
   </mat-card-header>
-  <form (submit)="saved.emit(currentProject)">
+  <form #projectForm="ngForm" (submit)="saved.emit(currentProject)">
     <mat-card-content>
       <mat-form-field class="full-width">
-        <input matInput placeholder="Title" [(ngModel)]="currentProject.title" type="text" name="title">
+        <input required #inputTitle="ngModel" matInput placeholder="Title" [(ngModel)]="currentProject.title" type="text" name="title">
+        <mat-error  *ngIf="inputTitle.invalid">
+          Project's title is a <strong>required</strong> field
+        </mat-error> 
       </mat-form-field>
       <mat-form-field class="full-width">
-        <textarea matInput placeholder="Details" [(ngModel)]="currentProject.details" name="details"></textarea>
+        <textarea required #textareaDetails="ngModel" matInput placeholder="Details" [(ngModel)]="currentProject.details" name="details"></textarea>
+         <mat-error *ngIf="textareaDetails.hasError('required')">
+          Project's detail is a <strong>required</strong> field
+        </mat-error> 
       </mat-form-field>
       <section>
         <h4>{{currentProject.percentComplete}}% Complete</h4>
@@ -26,8 +32,8 @@
       </section>
     </mat-card-content>
     <mat-card-actions>
-      <button type="submit" mat-button color="primary">Save</button>
-      <button type="button" mat-button (click)="cancelled.emit($event)">Cancel</button>
+      <button type="submit" [disabled]="!projectForm.form.valid" mat-button color="primary">Save</button>
+      <button type="button" mat-button (click)="projectForm.form.markAsPristine();cancelled.emit($event)">Cancel</button>
     </mat-card-actions>
   </form>
 </mat-card>

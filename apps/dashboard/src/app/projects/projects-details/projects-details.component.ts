@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, EventEmitter,Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter,Output, ViewChild } from '@angular/core';
 import { Project } from '@workshop/core-data';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-projects-details',
@@ -9,16 +10,18 @@ import { Project } from '@workshop/core-data';
 export class ProjectsDetailsComponent implements OnInit {
   @Output() saved = new EventEmitter();
   @Output() cancelled = new EventEmitter();
+  @ViewChild("projectForm") projectForm : NgForm;
   currentProject: Project;
   originalTitle: string;
 
   constructor() {}
 
   @Input() set project(value : Project){
-      if(value){
-          this.originalTitle = value.title;
-      }
-      this.currentProject = Object.assign({},value);
+    this.projectForm.resetForm();
+    if(value){
+        this.originalTitle = value.title;
+    }
+    this.currentProject = Object.assign({},value);
   }
 
 
