@@ -1,11 +1,14 @@
 # Projects Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
-Nx is an open source toolkit for enterprise Angular applications.
+This tool helps the management of projects. You can view, edit and delete existing projects and create new ones.
+The backend is a simple JSON file accessed through a REST API interface dynamically created by the [Json server](https://github.com/typicode/json-server)
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx). Nx is an open source toolkit for enterprise Angular applications.
 
 ## Development server
 
-Run `npm run server` and `ng serve --project=dashboard` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run server` in order to start the backend and `ng serve --project=dashboard` for the angular app. 
+Navigate to `http://localhost:4200/`.
 
 ## Build
 
