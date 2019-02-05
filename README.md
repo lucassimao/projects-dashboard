@@ -3,6 +3,9 @@
 This tool helps the management of projects. You can view, edit and delete existing projects and create new ones.
 The backend is a simple JSON file accessed through a REST API interface dynamically created by the [Json server](https://github.com/typicode/json-server)
 
+![Projects dashboard](https://raw.githubusercontent.com/lucassimao/projects-dashboard/master/projects.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx). Nx is an open source toolkit for enterprise Angular applications.
 
 ## Development server
